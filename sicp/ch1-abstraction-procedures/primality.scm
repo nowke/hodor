@@ -18,6 +18,7 @@
 ; Fermat test
 ; If n is a prime number and a is any positive integer less 
 ; than n, then a raised to the nth power is congruent to a modulo n
+(define (even? x) (= (remainder x 2) 0))
 (define (expmod base exp m)
     (cond ((= exp 0) 1)
           ((even? exp)
