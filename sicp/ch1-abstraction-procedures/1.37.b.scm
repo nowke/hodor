@@ -6,7 +6,7 @@
 ; Iterative version of `cont-frac`
 (define (cont-frac-iter n d k)
     (define (iter k res)
-        (if (< k 0)
+        (if (= k 0)
             res
             (iter (- k 1)
                   (/ (n k) (+ (d k) res)))))
