@@ -18,4 +18,4 @@ Exercises and programs from [Structure and Interpretation of Computer Programs](
     * [Rational numbers](ch2-abstraction-data/rational.scm)
   * Exercises
     * 2.1 Introduction to Data Abstraction
-      * [2.1](ch2-abstraction-data/2.01.scm), [2.2](ch2-abstraction-data/2.02.scm), [2.3](ch2-abstraction-data/2.03.scm)
+      * [2.1](ch2-abstraction-data/2.01.scm), [2.2](ch2-abstraction-data/2.02.scm), [2.3](ch2-abstraction-data/2.03.scm), [2.4](ch2-abstraction-data/2.04.scm), [2.5](ch2-abstraction-data/2.05.scm), [2.6](ch2-abstraction-data/2.06.scm)
