@@ -24,7 +24,7 @@ Exercises and programs from [Structure and Interpretation of Computer Programs](
     * 2.3 Symbolic Data
       * [2.53](ch2-abstraction-data/2.53.scm), [2.54](ch2-abstraction-data/2.54.scm), [2.55](ch2-abstraction-data/2.55.scm), [2.56](ch2-abstraction-data/2.56.scm), [2.57](ch2-abstraction-data/2.57.scm), [2.58 (a)](ch2-abstraction-data/2.58.a.scm), [2.59](ch2-abstraction-data/2.59.scm), [2.60](ch2-abstraction-data/2.60.scm), [2.61](ch2-abstraction-data/2.61.scm), [2.62](ch2-abstraction-data/2.62.scm), [2.63](ch2-abstraction-data/2.63.scm), [2.64](ch2-abstraction-data/2.64.scm), [2.65](ch2-abstraction-data/2.65.scm), [2.66](ch2-abstraction-data/2.66.scm), [2.67](ch2-abstraction-data/2.67.scm), [2.68](ch2-abstraction-data/2.68.scm), [2.69](ch2-abstraction-data/2.69.scm), [2.70](ch2-abstraction-data/2.70.scm), [2.71](ch2-abstraction-data/2.71.scm), [2.72](ch2-abstraction-data/2.72.scm)
     * 2.4 Multiple Representations for Abstract Data
-      * [2.73](ch2-abstraction-data/2.73.scm), [2.74](ch2-abstraction-data/2.74.scm)
+      * [2.73](ch2-abstraction-data/2.73.scm), [2.74](ch2-abstraction-data/2.74.scm), [2.75](ch2-abstraction-data/2.75.scm), [2.76](ch2-abstraction-data/2.76.scm)
 
 ## Running the programs
 
