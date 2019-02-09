@@ -61,7 +61,7 @@
             (let ((t2 (first-term L)))
                 (adjoin-term
                     (make-term
-                        (+ (order t1) (ordet t2))
+                        (+ (order t1) (order t2))
                         (mul (coeff t1) (coeff t2)))
                     (mul-term-by-all-terms
                         t1
@@ -72,6 +72,21 @@
             #t
             (and (=zero? (coeff (first-term term-list)))
                  (poly-zero? (rest-terms term-list)))))
+    ;; Subtraction
+    (define (negate-terms term-list)
+        (if (empty-termlist? term-list)
+            the-empty-termlist
+            (adjoin-term
+                (make-term 
+                    (order (first-term term-list)) 
+                    (negate (coeff (first-term term-list))))
+                (negate-terms (rest-terms term-list)))))
+    (define (sub-poly p1 p2)
+        (if (same-variable? (variable p1) (variable p2))
+            (make-poly 
+                (variable p1)
+                (add-terms (term-list p1) (negate-terms (term-list p2))))
+            (error "Polys not in same var: SUB-POLY" (list p1 p2))))
 
     ;; interface to rest of the system
     (define (tag p) (attach-tag 'polynomial p))
@@ -82,6 +97,13 @@
         (lambda (p1 p2) (tag (mul-poly p1 p2))))
     (put 'make 'polynomial
         (lambda (var terms) (tag (make-poly var terms))))
+    (put 'negate '(polynomial)
+        (lambda (p) 
+            (make-polynomial 
+                (variable p)
+                (negate-terms (term-list p)))))
+    (put 'sub '(polynomial polynomial)
+        (lambda (p1 p2) (tag (sub-poly p1 p2))))
     'done)
 
 ;; representation of terms

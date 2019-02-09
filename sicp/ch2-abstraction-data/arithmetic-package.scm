@@ -8,6 +8,7 @@
 (define (mul x y) (apply-generic 'mul x y))
 (define (div x y) (apply-generic 'div x y))
 (define (=zero? x) (apply-generic '=zero? x))
+(define (negate x) (apply-generic 'negate x))
 
 ; Primitive package
 (define (install-scheme-number-package)
@@ -22,6 +23,7 @@
          (lambda (x y) (tag (/ x y))))
     (put 'equ? '(scheme-number scheme-number) =)
     (put '=zero? '(scheme-number) (lambda (x) (= x 0)))
+    (put 'negate '(scheme-number) (lambda (x) (tag (- x))))
     (put 'make 'scheme-number (lambda (x) (tag x))) 
     'done)
 
@@ -64,6 +66,8 @@
             (and (= (numer x) (numer y))
                  (= (denom x) (denom y)))))
     (put '=zero? '(rational) (lambda (x) (= (numer x) 0)))
+    (put 'negate '(rational) 
+         (lambda (x) (make-rat (- numer x) (denom x))))
     (put 'make 'rational
          (lambda (n d) (tag (make-rat n d))))
     'done)
@@ -110,6 +114,10 @@
             (and (= (real-part z1) (real-part z2))
                  (= (imag-part z1) (imag-part z2)))))
     (put '=zero? '(complex) (lambda (z) (= (real-part z) (imag-part z) 0)))
+    (put 'negate '(complex)
+         (lambda (z) (make-from-real-imag 
+                         (- (real-part z))
+                         (- (imag-part z)))))
     (put 'make-from-real-imag 'complex
          (lambda (x y) (tag (make-from-real-imag x y))))
     (put 'make-from-mag-ang 'complex

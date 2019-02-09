@@ -25,16 +25,16 @@
 (define p1 
     (make-polynomial 
         'x
-        (list (make-term (make-scheme-number 2) (make-scheme-number 0))
-              (make-term (make-scheme-number 1) (make-scheme-number 0))
-              (make-term (make-scheme-number 0) (make-scheme-number 0))))) ; 0x^2 + 1x + 0
+        (list (make-term 2 (make-scheme-number 0))
+              (make-term 1 (make-scheme-number 0))
+              (make-term 0 (make-scheme-number 0))))) ; 0x^2 + 1x + 0
 
 (=zero? p1) ;Value: #t
 
 (define p2
     (make-polynomial
         'x
-        (list (make-term (make-scheme-number 2) (make-scheme-number 0))
-              (make-term (make-scheme-number 1) (make-scheme-number 2))
-              (make-term (make-scheme-number 0) (make-scheme-number 0)))))
+        (list (make-term 2 (make-scheme-number 0))
+              (make-term 1 (make-scheme-number 2))
+              (make-term 0 (make-scheme-number 0)))))
 (=zero? p2) ;Value: #f
