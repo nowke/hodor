@@ -1,5 +1,3 @@
-(load "general.scm")
-
 (define (install-polynomial-package)
     ;; internal procedures
     ;; representation of poly
@@ -68,9 +66,16 @@
                     (mul-term-by-all-terms
                         t1
                         (rest-terms L))))))
+    
+    (define (poly-zero? term-list)
+        (if (empty-termlist? term-list)
+            #t
+            (and (=zero? (coeff (first-term term-list)))
+                 (poly-zero? (rest-terms term-list)))))
 
     ;; interface to rest of the system
     (define (tag p) (attach-tag 'polynomial p))
+    (put '=zero? '(polynomial) (lambda (p) (poly-zero? (term-list p))))
     (put 'add '(polynomial polynomial)
         (lambda (p1 p2) (tag (add-poly p1 p2))))
     (put 'mul '(polynomial polynomial)
@@ -78,3 +83,19 @@
     (put 'make 'polynomial
         (lambda (var terms) (tag (make-poly var terms))))
     'done)
+
+;; representation of terms
+(define (adjoin-term term term-list)
+    (if (=zero? (coeff term))
+        term-list
+        (cons term term-list)))
+(define (the-empty-termlist) '())
+(define (first-term term-list) (car term-list))
+(define (rest-terms term-list) (cdr term-list))
+(define (empty-termlist? term-list) (null? term-list))
+(define (make-term order coeff) (list order coeff))
+(define (order term) (car term))
+(define (coeff term) (cadr term))
+
+(define (make-polynomial var terms)
+    ((get 'make 'polynomial) var terms))
