@@ -26,7 +26,7 @@ Exercises and programs from [Structure and Interpretation of Computer Programs](
     * 2.4 Multiple Representations for Abstract Data
       * [2.73](ch2-abstraction-data/2.73.scm), [2.74](ch2-abstraction-data/2.74.scm), [2.75](ch2-abstraction-data/2.75.scm), [2.76](ch2-abstraction-data/2.76.scm)
     * 2.5 Systems with Generic Operations
-      * [2.77](ch2-abstraction-data/2.77.scm), [2.78](ch2-abstraction-data/2.78.scm), [2.79](ch2-abstraction-data/2.79.scm), [2.80](ch2-abstraction-data/2.80.scm), [2.81](ch2-abstraction-data/2.81.scm), [2.82](ch2-abstraction-data/2.82.scm), [2.83](ch2-abstraction-data/2.83.scm), [2.84](ch2-abstraction-data/2.84.scm), [2.85](ch2-abstraction-data/2.85.scm), [2.86](ch2-abstraction-data/2.86.scm), [2.87](ch2-abstraction-data/2.87.scm), [2.88](ch2-abstraction-data/2.88.scm), [2.89](ch2-abstraction-data/2.89.scm)
+      * [2.77](ch2-abstraction-data/2.77.scm), [2.78](ch2-abstraction-data/2.78.scm), [2.79](ch2-abstraction-data/2.79.scm), [2.80](ch2-abstraction-data/2.80.scm), [2.81](ch2-abstraction-data/2.81.scm), [2.82](ch2-abstraction-data/2.82.scm), [2.83](ch2-abstraction-data/2.83.scm), [2.84](ch2-abstraction-data/2.84.scm), [2.85](ch2-abstraction-data/2.85.scm), [2.86](ch2-abstraction-data/2.86.scm), [2.87](ch2-abstraction-data/2.87.scm), [2.88](ch2-abstraction-data/2.88.scm), [2.89](ch2-abstraction-data/2.89.scm), [2.90](ch2-abstraction-data/2.90.scm)
 
 ## Running the programs
 

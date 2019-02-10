@@ -14,6 +14,11 @@
           (else (adjoin-term term
                              (cons 0 term-list)))))
 
+(define (first-term term-list)
+    (make-term 
+        (- (length term-list) 1)
+        (car term-list)))
+
 ; Attaching 4x^4 to (2x^3 + 5x + 7) will be,
 ; (adjoin-term (4 3) (2 0 5 7))
 ;   => (3 2 0 5 7)
