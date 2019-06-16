@@ -1,0 +1,45 @@
+site_name: hodor
+repo_name: 'nowke/hodor'
+repo_url: 'https://github.com/nowke/hodor/'
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/nowke'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/in/nowke/'
+    - type: 'twitter'
+      link: 'https://twitter.com/inowke'
+
+theme:
+  name: 'material'
+  palette:
+    primary: 'white'
+    accent: 'lightblue'
+  font:
+    text: 'IBM Plex Sans'
+    code: 'IBM Plex Mono'
+  logo:
+    icon: 'code'
+  favicon: 'assets/images/favicon.ico'
+  feature:
+    tabs: true
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - meta
+  - pymdownx.arithmatex
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+
